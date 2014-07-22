@@ -1,6 +1,6 @@
 #Tic Tac Toe
 
-**Objective:** Build a tic taco game in HTML/JavaScript/CSS.
+**Objective:** Build a Tic Tac Toe game in HTML/JavaScript/CSS.
 
 
 ## Dependencies
