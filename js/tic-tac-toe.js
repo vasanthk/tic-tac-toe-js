@@ -6,7 +6,7 @@ $(function () {
 	var N_SIZE = 3,
 		EMPTY = "&nbsp;",
 		boxes = [],
-		turn = "X",
+		turn = "A",
 		score,
 		moves;
 
@@ -47,11 +47,11 @@ $(function () {
 	 */
 	function startNewGame() {
 		score = {
-			"X": 0,
-			"O": 0
+			"A": 0,
+			"B": 0
 		};
 		moves = 0;
-		turn = "X";
+		turn = "A";
 		boxes.forEach(function (square) {
 			square.html(EMPTY);
 		});
@@ -85,14 +85,14 @@ $(function () {
 		score[turn] += $(this)[0].identifier;
 		//console.log(score[turn]);
 		if (win($(this))) {
-			alert(turn + " wins the game!");
+			alert('Winner: Player ' + turn);
 			startNewGame();
 		} else if (moves === N_SIZE * N_SIZE) {
-			alert("Draw game!");
+			alert("Draw");
 			startNewGame();
 		} else {
-			turn = turn === "X" ? "O" : "X";
-			$('#turn').text(turn + ' to play')
+			turn = turn === "A" ? "B" : "A";
+			$('#turn').text('Player ' + turn);
 		}
 	}
 
