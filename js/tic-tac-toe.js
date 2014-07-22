@@ -24,6 +24,12 @@ $(function () {
 			for (var j = 0; j < N_SIZE; j++) {
 				var cell = $("<td height=120 width=120 align=center valign=center></td>");
 				cell.addClass('col' + j).addClass('row' + i);
+				if (i == j) {
+					cell.addClass('diagonal0');
+				}
+				if (j == N_SIZE - i - 1) {
+					cell.addClass('diagonal1');
+				}
 				cell[0].identifier = identifier;
 				cell.click(set);
 				row.append(cell);
