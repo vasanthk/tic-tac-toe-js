@@ -1,5 +1,9 @@
 /*
  * Tic Tac Toe
+ *
+ * A Tic Tac Toe game in HTML/JavaScript/CSS.
+ *
+ * @author: Vasanth Krishnamoorthy
  */
 $(function () {
 
@@ -11,9 +15,7 @@ $(function () {
 		moves;
 
 	/*
-	 * Creates and attaches the DOM elements for the board as an
-	 * HTML table, assigns the identifiers for each cell, and starts
-	 * a new game.
+	 * Initializes the Tic Tac Toe board and starts the game.
 	 */
 	function init() {
 		var board = $("<table border=1 cellspacing=0>"),
@@ -83,7 +85,6 @@ $(function () {
 		$(this).html(turn);
 		moves += 1;
 		score[turn] += $(this)[0].identifier;
-		//console.log(score[turn]);
 		if (win($(this))) {
 			alert('Winner: Player ' + turn);
 			startNewGame();
