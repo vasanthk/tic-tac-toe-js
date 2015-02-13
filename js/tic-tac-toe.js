@@ -53,7 +53,7 @@ $(function () {
 			"O": 0
 		};
 		moves = 0;
-		turn = "O";
+		turn = "X";
 		boxes.forEach(function (square) {
 			square.html(EMPTY);
 		});
