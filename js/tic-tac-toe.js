@@ -10,7 +10,7 @@ $(function () {
 	var N_SIZE = 3,
 		EMPTY = "&nbsp;",
 		boxes = [],
-		turn = "A",
+		turn = "X",
 		score,
 		moves;
 
@@ -49,11 +49,11 @@ $(function () {
 	 */
 	function startNewGame() {
 		score = {
-			"A": 0,
-			"B": 0
+			"X": 0,
+			"O": 0
 		};
 		moves = 0;
-		turn = "A";
+		turn = "O";
 		boxes.forEach(function (square) {
 			square.html(EMPTY);
 		});
@@ -92,7 +92,7 @@ $(function () {
 			alert("Draw");
 			startNewGame();
 		} else {
-			turn = turn === "A" ? "B" : "A";
+			turn = turn === "X" ? "O" : "X";
 			$('#turn').text('Player ' + turn);
 		}
 	}
