@@ -8,11 +8,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f0f0f0;
+  background: linear-gradient(135deg, #12001f, #001a33);
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .container {
@@ -20,38 +20,42 @@ body {
   align-content: center;
   justify-content: center;
   flex-direction: column;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  background: #160022;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #ff1493, 0 0 45px #00bfff;
+  padding: 25px;
   margin: auto;
+  border: 2px solid #00bfff;
 }
 
 table {
   border-collapse: collapse;
   margin: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px #00bfff;
 }
 
 td {
-  background-color: #4a4a4a;
-  border: 5px solid #fff;
+  background-color: #08001a;
+  border: 4px solid #ff1493;
   font-size: 80px;
-  color: #fff;
+  color: #00eaff;
   text-align: center;
   vertical-align: middle;
   width: 150px;
   height: 150px;
-  transition: background-color 0.3s;
+  transition: 0.3s;
   position: relative;
   perspective: 1000px;
+  text-shadow: 0 0 10px #00eaff, 0 0 20px #00bfff;
 }
 
 td:hover {
-  background-color: #5a5a5a;
+  background-color: #21003d;
+  box-shadow: inset 0 0 20px #ff1493;
 }
 
-td.x::before, td.o::before {
+td.x::before,
+td.o::before {
   content: '';
   display: block;
   width: 100%;
@@ -64,37 +68,37 @@ td.x::before, td.o::before {
 }
 
 td.x::before {
-  background-image: url('path/to/x-image.png'); /* Replace with your 3D X image path */
+  background-image: url('path/to/x-image.png');
 }
 
 td.o::before {
-  background-image: url('path/to/o-image.png'); /* Replace with your 3D O image path */
+  background-image: url('path/to/o-image.png');
 }
 
 #player {
   padding: 1rem;
   text-align: center;
   font-size: 1.5rem;
-  color: #333;
+  color: #ff69b4;
+  text-shadow: 0 0 10px #ff1493;
 }
 
 .dark {
-  background: #333;
+  background: #12001f;
   color: #f0f0f0;
 }
 
 .dark td {
-  background-color: #666;
-  border-color: #444;
+  background-color: #08001a;
+  border-color: #ff1493;
 }
 
 .light {
-  background: #fff;
-  color: #333;
+  background: #001a33;
+  color: #fff;
 }
 
 .light td {
-  background-color: #ddd;
-  border-color: #bbb;
+  background-color: #002b45;
+  border-color: #00bfff;
 }
-

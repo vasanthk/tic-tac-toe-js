@@ -1,22 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ultimate Tic Tac Toe</title>
+    <title>Jogo da Velha</title>
     <link rel="stylesheet" type="text/css" href="css/tic-tac-toe.css" />
 </head>
 <body>
     <main class="container">
         <div class="theme-toggle">
             <input type="checkbox" id="theme-switch" />
-            <label for="theme-switch">Toggle Dark/Light Mode</label>
+            <label for="theme-switch">Alternar modo claro/escuro</label>
         </div>
-        <div id="tictactoe" role="grid" aria-label="Tic Tac Toe Board"></div>
+
+        <div id="tictactoe" role="grid" aria-label="Tabuleiro do jogo da velha"></div>
+
         <div id="player" align="center">
-            <span id="turn" role="status" aria-live="polite">Player X</span>
+            <span id="turn" role="status" aria-live="polite">Jogador X</span>
         </div>
     </main>
+
     <script type="text/javascript" src="js/tic-tac-toe.js" defer></script>
 </body>
 </html>
